@@ -17,10 +17,10 @@ const Header = () => {
         <Image alt="profile-img" src={assets.hand_icon} className="w-6" />
       </h3>
       <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-        Frontend web developer based in Vietnam
+        Fullstack web developer based in Vietnam
       </h1>
       <p className="max-w-2xl mx-auto font-Ovo">
-        I am a frontend developer from Vietnam with 3 years of experience in
+        I am a fullstack developer from Vietnam with 3 years of experience in
         multiple companies
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
