@@ -20,6 +20,11 @@ import firebase from "@/assets/firebase.png";
 import figma from "@/assets/figma.png";
 import git from "@/assets/git.png";
 import mongodb from "@/assets/mongodb.png";
+import web_icon from "@/assets/web-icon.png";
+import ui_icon from "@/assets/ui-icon.png";
+import mobile_icon from "@/assets/mobile-icon.png";
+import graphics_icon from "@/assets/graphics-icon.png";
+import right_arrow from "@/assets/right-arrow.png";
 
 export const assets = {
   logo,
@@ -44,6 +49,11 @@ export const assets = {
   figma,
   git,
   mongodb,
+  web_icon,
+  ui_icon,
+  mobile_icon,
+  graphics_icon,
+  right_arrow,
 };
 
 export const infoList = [
@@ -51,7 +61,8 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "HTML, CSS, Javascript, ReactJS, NextJS, NodeJS, Express, NestJS",
+    description:
+      "HTML, CSS, Javascript, ReactJS, NextJS, NodeJS, Express, NestJS",
   },
   {
     icon: assets.edu_icon,
@@ -73,4 +84,33 @@ export const toolsData = [
   assets.mongodb,
   assets.figma,
   assets.git,
+];
+
+export const serviceData = [
+  {
+    icon: assets.web_icon,
+    title: "Web design",
+    description: "Web development is the process of building, programming...",
+    link: "",
+  },
+  {
+    icon: assets.mobile_icon,
+    title: "Mobile app",
+    description:
+      "Mobile app development involves creating software for mobile devices...",
+    link: "",
+  },
+  {
+    icon: assets.ui_icon,
+    title: "UI/UX design",
+    description:
+      "UI/UX design focuses on creating a seamless user experience...",
+    link: "",
+  },
+  {
+    icon: assets.graphics_icon,
+    title: "Graphics design",
+    description: "Creative design solutions to enhance visual communication...",
+    link: "",
+  },
 ];
