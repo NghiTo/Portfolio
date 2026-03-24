@@ -25,6 +25,8 @@ import ui_icon from "@/assets/ui-icon.png";
 import mobile_icon from "@/assets/mobile-icon.png";
 import graphics_icon from "@/assets/graphics-icon.png";
 import right_arrow from "@/assets/right-arrow.png";
+import send_icon from "@/assets/send-icon.png";
+import right_arrow_bold from "@/assets/right-arrow-bold.png";
 
 export const assets = {
   logo,
@@ -54,6 +56,8 @@ export const assets = {
   mobile_icon,
   graphics_icon,
   right_arrow,
+  send_icon,
+  right_arrow_bold,
 };
 
 export const infoList = [
@@ -112,5 +116,28 @@ export const serviceData = [
     title: "Graphics design",
     description: "Creative design solutions to enhance visual communication...",
     link: "",
+  },
+];
+
+export const workData = [
+  {
+    title: "Frontend project",
+    description: "Web Design",
+    bgImage: "/work-1.png",
+  },
+  {
+    title: "Geo based app",
+    description: "Mobile App",
+    bgImage: "/work-2.png",
+  },
+  {
+    title: "Photography site",
+    description: "Web Design",
+    bgImage: "/work-3.png",
+  },
+  {
+    title: "UI/UX designing",
+    description: "UI/UX Design",
+    bgImage: "/work-4.png",
   },
 ];
