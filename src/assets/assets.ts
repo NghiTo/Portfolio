@@ -27,6 +27,7 @@ import graphics_icon from "@/assets/graphics-icon.png";
 import right_arrow from "@/assets/right-arrow.png";
 import send_icon from "@/assets/send-icon.png";
 import right_arrow_bold from "@/assets/right-arrow-bold.png";
+import mail_icon from "@/assets/mail_icon.png";
 
 export const assets = {
   logo,
@@ -58,6 +59,7 @@ export const assets = {
   right_arrow,
   send_icon,
   right_arrow_bold,
+  mail_icon,
 };
 
 export const infoList = [

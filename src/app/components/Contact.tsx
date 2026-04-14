@@ -68,7 +68,7 @@ const Contact = () => {
           type="submit"
         >
           Submit now
-          <Image src={assets.right_arrow_white} alt="" className="w-4"></Image>
+          <Image src={assets.right_arrow_white} alt="" className="w-4"/>
         </button>
         <p className="mt-4">{result}</p>
       </form>
