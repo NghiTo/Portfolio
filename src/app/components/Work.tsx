@@ -1,29 +1,33 @@
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
+
+interface WorkProps {
+  isDarkMode: boolean;
+}
 import React from "react";
 
-const Work = () => {
+const Work: React.FC<WorkProps> = ({ isDarkMode }) => {
   return (
-    <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
-      <h2 className="text-center text-5xl font-Ovo">My latest work</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+    <div id="work" className="w-full scroll-mt-20 px-[12%] py-10">
+      <h4 className="font-Ovo mb-2 text-center text-lg">My portfolio</h4>
+      <h2 className="font-Ovo text-center text-5xl">My latest work</h2>
+      <p className="font-Ovo mx-auto mt-5 mb-12 max-w-2xl text-center">
         Welcome to my web development portfolio! Explore a collection of
         projects showcasing my expertise in fullstack development
       </p>
-      <div className="grid grid-cols-auto my-10 gap-5">
+      <div className="grid-cols-auto my-10 grid gap-5 dark:text-black">
         {workData.map((project, index) => (
           <div
             key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+            className="group relative aspect-square cursor-pointer rounded-lg bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+            <div className="absolute bottom-5 left-1/2 flex w-10/12 -translate-x-1/2 items-center justify-between rounded-md bg-white px-5 py-3 duration-500 group-hover:bottom-7">
               <div>
                 <h2 className="font-semibold">{project.title}</h2>
                 <p className="text-sm text-gray-700">{project.description}</p>
               </div>
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+              <div className="flex aspect-square w-9 items-center justify-center rounded-full border border-black shadow-[2px_2px_0_#000] transition group-hover:bg-lime-300">
                 <Image src={assets.send_icon} alt="send icon" className="w-5" />
               </div>
             </div>
@@ -32,11 +36,13 @@ const Work = () => {
       </div>
       <a
         href=""
-        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500"
+        className="hover:bg-lightHover dark:hover:bg-darkHover mx-auto my-20 flex w-max items-center justify-center gap-2 rounded-full border-[0.5px] border-gray-700 px-10 py-3 text-gray-700 duration-500 dark:border-white dark:text-white"
       >
         Show more{" "}
         <Image
-          src={assets.right_arrow_bold}
+          src={
+            isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
+          }
           alt="Right arrow"
           className="w-4"
         ></Image>

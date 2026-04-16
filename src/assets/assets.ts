@@ -28,6 +28,13 @@ import right_arrow from "@/assets/right-arrow.png";
 import send_icon from "@/assets/send-icon.png";
 import right_arrow_bold from "@/assets/right-arrow-bold.png";
 import mail_icon from "@/assets/mail_icon.png";
+import sun_icon from "@/assets/sun_icon.png";
+import logo_dark from "@/assets/logo_dark.png";
+import arrow_icon_dark from "@/assets/arrow-icon-dark.png";
+import menu_white from "@/assets/menu-white.png";
+import close_white from "@/assets/close-white.png";
+import right_arrow_bold_dark from "@/assets/right-arrow-bold-dark.png";
+import mail_icon_dark from "@/assets/mail_icon_dark.png";
 
 export const assets = {
   logo,
@@ -60,6 +67,13 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   mail_icon,
+  sun_icon,
+  logo_dark,
+  arrow_icon_dark,
+  menu_white,
+  close_white,
+  right_arrow_bold_dark,
+  mail_icon_dark,
 };
 
 export const infoList = [

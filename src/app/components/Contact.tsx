@@ -31,25 +31,25 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto]'
+      className='w-full scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-[length:90%_auto] bg-center bg-no-repeat px-[12%] py-10 dark:bg-none'
     >
-      <h4 className="text-center mb-2 text-lg font-Ovo">Contact with me</h4>
-      <h2 className="text-center text-5xl font-Ovo">Get in touch</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+      <h4 className="font-Ovo mb-2 text-center text-lg">Contact with me</h4>
+      <h2 className="font-Ovo text-center text-5xl">Get in touch</h2>
+      <p className="font-Ovo mx-auto mt-5 mb-12 max-w-2xl text-center">
         I'd love to hear from you! If you have any questions, comments, or
         feedback, please use the form below
       </p>
-      <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
-        <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
+      <form onSubmit={onSubmit} className="mx-auto max-w-2xl">
+        <div className="grid-cols-auto mt-10 mb-8 grid gap-6">
           <input
-            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            className="dark:bg-darkHover/30 flex-1 rounded-md border-[0.5px] border-gray-400 bg-white p-3 outline-none dark:border-white/90"
             type="text"
             name="name"
             placeholder="Enter your name"
             required
           />
           <input
-            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            className="dark:bg-darkHover/30 flex-1 rounded-md border-[0.5px] border-gray-400 bg-white p-3 outline-none dark:border-white/90"
             type="email"
             name="email"
             placeholder="Enter your email"
@@ -57,18 +57,18 @@ const Contact = () => {
           />
         </div>
         <textarea
-          className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+          className="dark:bg-darkHover/30 mb-6 w-full rounded-md border-[0.5px] border-gray-400 bg-white p-4 outline-none dark:border-white/90"
           rows={6}
           name="message"
           placeholder="Enter your message"
           required
         ></textarea>
         <button
-          className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
+          className="dark:hover:bg-darkHover mx-auto flex w-max cursor-pointer items-center justify-between gap-2 rounded-full bg-black/80 px-8 py-3 text-white duration-500 hover:bg-black dark:border-[0.5px] dark:bg-transparent"
           type="submit"
         >
           Submit now
-          <Image src={assets.right_arrow_white} alt="" className="w-4"/>
+          <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </button>
         <p className="mt-4">{result}</p>
       </form>

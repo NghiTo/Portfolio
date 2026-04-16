@@ -5,6 +5,8 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-lightHover: #fcf4ff;
   --color-darkHover: #2a004a;
