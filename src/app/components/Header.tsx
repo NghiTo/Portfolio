@@ -23,7 +23,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="font-Ovo mb-3 flex items-end gap-2 text-xl md:text-2xl"
       >
-        Hi! I'm Kenzy{" "}
+        Hi! I&apos;m Kenzy{" "}
         <Image alt="profile-img" src={assets.hand_icon} className="w-6" />
       </motion.h3>
       <motion.h1
