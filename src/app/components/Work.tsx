@@ -1,23 +1,56 @@
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
+import React from "react";
+import { motion } from "motion/react";
 
 interface WorkProps {
   isDarkMode: boolean;
 }
-import React from "react";
 
 const Work: React.FC<WorkProps> = ({ isDarkMode }) => {
   return (
-    <div id="work" className="w-full scroll-mt-20 px-[12%] py-10">
-      <h4 className="font-Ovo mb-2 text-center text-lg">My portfolio</h4>
-      <h2 className="font-Ovo text-center text-5xl">My latest work</h2>
-      <p className="font-Ovo mx-auto mt-5 mb-12 max-w-2xl text-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="work"
+      className="w-full scroll-mt-20 px-[12%] py-10"
+    >
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="font-Ovo mb-2 text-center text-lg"
+      >
+        My portfolio
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="font-Ovo text-center text-5xl"
+      >
+        My latest work
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="font-Ovo mx-auto mt-5 mb-12 max-w-2xl text-center"
+      >
         Welcome to my web development portfolio! Explore a collection of
         projects showcasing my expertise in fullstack development
-      </p>
-      <div className="grid-cols-auto my-10 grid gap-5 dark:text-black">
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="grid-cols-auto my-10 grid gap-5 dark:text-black"
+      >
         {workData.map((project, index) => (
-          <div
+          <motion.div
+            whileInView={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
             key={index}
             className="group relative aspect-square cursor-pointer rounded-lg bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${project.bgImage})` }}
@@ -31,10 +64,13 @@ const Work: React.FC<WorkProps> = ({ isDarkMode }) => {
                 <Image src={assets.send_icon} alt="send icon" className="w-5" />
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-      <a
+      </motion.div>
+      <motion.a
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1.1 }}
         href=""
         className="hover:bg-lightHover dark:hover:bg-darkHover mx-auto my-20 flex w-max items-center justify-center gap-2 rounded-full border-[0.5px] border-gray-700 px-10 py-3 text-gray-700 duration-500 dark:border-white dark:text-white"
       >
@@ -46,8 +82,8 @@ const Work: React.FC<WorkProps> = ({ isDarkMode }) => {
           alt="Right arrow"
           className="w-4"
         ></Image>
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   );
 };
 
